@@ -66,7 +66,9 @@ export function App() {
 
   useEffect(() => startQueueRetries(), []);
   useEffect(() => onQueueChange(setQueued), []);
-  useEffect(() => window.scrollTo(0, 0), [route.join("/")]);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [route.join("/")]);
 
   return (
     <TooltipProvider>
